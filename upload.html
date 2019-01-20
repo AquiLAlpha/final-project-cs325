@@ -1,31 +1,23 @@
-<html>
-<head>
-    <title>Log In</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript">
-        window.onresize = setViewSize;
-        var marginLeft=0;
-        var marginTop=0;
-        function setViewSize() {
-            var w=window.innerWidth
-                || document.documentElement.clientWidth
-                || document.body.clientWidth;
-            var h=window.innerHeight
-                || document.documentElement.clientHeight
-                || document.body.clientHeight;
-            marginLeft = (w-468)/2;
-            marginTop = (h-262)/2;
-            document.getElementById("loginFormMain").style.marginLeft=marginLeft;
-            document.getElementById("loginFormMain").style.marginTop=marginTop;
-        }
+<!DOCTYPE html>
+<html lang="en">
+<body>
 
-    </script>
-</head>
-
-<body bgcolor="#1E81C2" onload="javascript:setViewSize();" >
-<form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data" >
-    　　　<input type="file" id="upload" name="upload" /> <br />
-    　　　<input type="submit" value="Upload" />
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    
+    <p class="formtitle">Name</p>
+    <input type="text" name="name" class="txtfield">
+    <p class="formtitle">E-mail</p>
+    <input type="text" name="email" class="txtfield">
+    <p class="formtitle">Phone number</p>
+    <input type="text" name="phone" class="txtfield">
+    <p class="formtitle">Gender:</p>
+  <input type="radio" name="gender" value="female"><p>Female</p>
+  <input type="radio" name="gender" value="male"><p>Male</p>
+  <input type="radio" name="gender" value="other"><p>Other</p> 
+    <p class="formtitle">Select file to upload:</p>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload document" name="submit">
 </form>
+
 </body>
 </html>
